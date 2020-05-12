@@ -1,23 +1,42 @@
+import math
+
 
 def prime(inputNum):
-    factors = ""
-    iteration = 1
+    method1 = 1
+    method2 = 1
+    i = 2
     for number in range(2, int(inputNum)):
-        iteration += 1
+        method1 += 1
+    while int(inputNum) > 1 and i <= math.sqrt(int(inputNum)):
+        while int(inputNum) / i:
+            method2 += 1
+            break
+        method2 += 1
+        break
     print(inputNum + " is prime number and factors are -> " + inputNum)
-    print("With 1st method number of iteration  is: " + str(iteration))
+    print("With 1st method number of iteration  is: " + str(method1))
+    print("With 2st method number of iteration  is: " + str(method2))
     main()
 
 
 def composite(inputNum):
     factors = ""
-    iteration = 1
+    method1 = 1
+    method2 = 1
+    i = 2
     for number in range(2, int(inputNum)):
-        iteration += 1
+        method1 += 1
         if int(inputNum) % number == 0:
             factors += str(number)+","
+    while int(inputNum) > 1 and i <= math.sqrt(int(inputNum)):
+        while int(inputNum) / i:
+            method2 += 1
+            break
+        method2 += 1
+        break
     print(inputNum+" is composite number and factors are -> "+factors+inputNum)
-    print("With 1st method number of iteration  is: " + str(iteration))
+    print("With 1st method number of iteration  is: " + str(method1))
+    print("With 2st method number of iteration  is: " + str(method2))
     main()
 
 
